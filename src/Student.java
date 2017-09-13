@@ -8,7 +8,8 @@ import java.util.Date;
  * or hashCode() method
  * 
  */
-public class Student implements Comparable {
+public class Student implements Comparable 
+{
 
 	/**
 	 * student id

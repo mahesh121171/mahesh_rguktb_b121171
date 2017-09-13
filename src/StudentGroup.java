@@ -301,6 +301,7 @@ public class StudentGroup implements StudentArrayOperation {
 			if(students[i].getAvgMark()==mark)
 				count++;	
 		}
+		if(count==0)return null;
 		Student[] s=new Student[count];
 		for (int i=0,j=0;i<students.length ;++i ) 
 		{
