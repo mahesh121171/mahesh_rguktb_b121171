@@ -260,11 +260,10 @@ public class StudentGroup implements StudentArrayOperation {
 		Student[] s=new Student[count];
 		for (int i=0,j=0;i<students.length ;++i )
 		{
-			if(if(students[i].getBirthDate().after(firstDate) && students[i].getBirthDate().before(lastDate) || students[i].getBirthDate().equals(lastDate)|| students[i].getBirthDate().equals(firstDate) ))
+			if(students[i].getBirthDate().after(firstDate) && students[i].getBirthDate().before(lastDate) || students[i].getBirthDate().equals(lastDate)|| students[i].getBirthDate().equals(firstDate) )
 				s[j++]=students[i];			
 		}
 		return s;
-		return null;
 	}
 
 	@Override
