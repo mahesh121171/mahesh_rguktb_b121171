@@ -192,7 +192,7 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void removeToElement(Student student) {
+	public void removeToElement(Student student) throws IllegalArgumentException {
 		// Add your implementation here
 		if(student==null)
 		{
@@ -263,8 +263,21 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getNextStudent(Student student) {
+	public Student getNextStudent(Student student) throws IllegalArgumentException {
 		// Add your implementation here
+		if(student==null)
+		{
+			throw new IllegalArgumentException();
+		}
+		int index=-1;
+		for (int i=0;i<students.length ;++i ) {
+			if(student.equals(students[i]))
+				index=i;
+		}
+		if(index!=-1)
+		{
+			return students[index+1];
+		}
 		return null;
 	}
 }
