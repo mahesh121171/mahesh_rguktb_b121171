@@ -229,42 +229,41 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getByBirthDate(Date date) throws IllegalArgumentException {
 		// Add your implementation here
-		/*if(date==null)
+		if(date==null)
 			throw new IllegalArgumentException();
 		int count=0;
 		for (int i=0;i<students.length ;++i )
 		{
-			if(students[i].getBirthDate().compareTo(date)<=0)
+			if(students[i].getBirthDate().before(date))
 				count++;
 		}
 		Student[] s=new Student[count];
 		for (int i=0,j=0;i<students.length ;++i )
 		{
-			if(students[i].getBirthDate().compareTo(date)<=0)
+			if(students[i].getBirthDate().before(date) || students[i].getBirthDate().equals(date))
 				s[j++]=students[i];			
 		}
-		return s;*/
-		return null;
+		return s;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
-		/*if(firstDate==null || lastDate==null)
+		if(firstDate==null || lastDate==null)
 			throw new IllegalArgumentException();
 		int count=0;
 		for (int i=0;i<students.length ;++i )
 		{
-			if(students[i].getBirthDate().compareTo(firstDate)>=0 && students[i].getBirthDate().compareTo(lastDate)<=0 )
+			if(students[i].getBirthDate().after(firstDate) && students[i].getBirthDate().before(lastDate) || students[i].getBirthDate().equals(lastDate)|| students[i].getBirthDate().equals(firstDate) )
 				count++;
 		}
 		Student[] s=new Student[count];
 		for (int i=0,j=0;i<students.length ;++i )
 		{
-			if(students[i].getBirthDate().compareTo(date)<=0)
+			if(if(students[i].getBirthDate().after(firstDate) && students[i].getBirthDate().before(lastDate) || students[i].getBirthDate().equals(lastDate)|| students[i].getBirthDate().equals(firstDate) ))
 				s[j++]=students[i];			
 		}
-		return s;*/
+		return s;
 		return null;
 	}
 
