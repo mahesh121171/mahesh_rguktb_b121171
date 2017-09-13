@@ -234,7 +234,7 @@ public class StudentGroup implements StudentArrayOperation {
 		int count=0;
 		for (int i=0;i<students.length ;++i )
 		{
-			if(students[i].getBirthDate().before(date))
+			if(students[i].getBirthDate().before(date) || || students[i].getBirthDate().equals(date))
 				count++;
 		}
 		Student[] s=new Student[count];
